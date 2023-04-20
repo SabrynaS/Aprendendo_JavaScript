@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(193, 227, 164);
+        color: rgb(8, 83, 44);
+        font:normal 15px Arial;
+    }
+</style>
+<body>
+    <h1>Introdução ao DOM</h1>
+    <p>Aqui vai o resultado!</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> no JavaScript.</p>
+    <div id = "msg">Clique em mim</div>
+</body>
+<script>
+    var p1=window.document.getElementsByTagName('p')[1]
+    window.document.write(p1.innerText,'<br/>')//não pega a tag strong
+    window.document.write(p1.innerHTML)
+    p1.style.color = "purple"
+
+    var corpo=window.document.body
+   // corpo.style.background="pink"
+
+   var d=window.document.getElementById('msg')
+   d.style.color = 'white'
+    d.style.background='black'
+   // d.innerText='tchau'// mudar o conteúdo
+</script>
+</html>
